@@ -4,3 +4,5 @@ pdf2image
 opencv-python-headless
 numpy
 pillow
+pdf2image
+poppler-utils
