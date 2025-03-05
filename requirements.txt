@@ -6,3 +6,9 @@ numpy
 pillow
 pdf2image
 poppler-utils
+pdf2image
+pytesseract
+streamlit
+opencv-python-headless
+numpy
+pillow
