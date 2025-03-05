@@ -1,5 +1,6 @@
 import streamlit as st
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 from pdf2image import convert_from_path
 import cv2
 import numpy as np
@@ -10,7 +11,7 @@ import os
 def extract_text_from_image(image_path):
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    text = pytesseract.image_to_string(gray, lang='spa')
+    text = pytesseract.image_to_string(gray, lang='eng')
     return text
 
 # Función para extraer texto de un PDF
@@ -62,4 +63,4 @@ if uploaded_file is not None:
     nomina_data = parse_nomina_data(extracted_text)
     st.write("### Datos extraídos:")
     st.json(nomina_data)
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
