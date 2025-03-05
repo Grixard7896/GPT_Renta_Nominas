@@ -62,3 +62,4 @@ if uploaded_file is not None:
     nomina_data = parse_nomina_data(extracted_text)
     st.write("### Datos extraídos:")
     st.json(nomina_data)
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
